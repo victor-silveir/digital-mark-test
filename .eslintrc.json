@@ -33,6 +33,7 @@
         "react/react-in-jsx-scope": "off",
         "react/require-default-props": "off",
         "import/no-unresolved": "error",
+        "no-unused-expressions": "off",
         "import/extensions": [
             "error",
             "ignorePackages",
