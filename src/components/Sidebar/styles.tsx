@@ -13,6 +13,7 @@ export const Wrapper = styled.div`
 
 export const TitleContainer = styled.div`
 	display: flex;
+	padding: 0.7rem 0;
 	align-items: center;
 	justify-content: space-around;
 `;
@@ -44,7 +45,7 @@ export const MenuItem = styled.li`
 		font-size: 1.125rem;
 		font-weight: 500;
 		color: ${theme.colors.white};
-		padding: 1.2rem 1rem;
+		padding: 1.2rem 1.2rem;
 		border-radius: 0.5rem;
 		cursor: pointer;
 		transition: all 0.5s ease-in-out;

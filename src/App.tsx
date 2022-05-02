@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'styled-components';
-import Header from './components/Header';
+import Layout from './pages/Layout';
 import GlobalStyles from './styles/global';
 import theme from './styles/theme';
 
@@ -7,7 +7,7 @@ function App() {
 	return (
 		<ThemeProvider theme={theme}>
 			<GlobalStyles />
-			<Header pageTitle="hello world" />
+			<Layout />
 		</ThemeProvider>
 	);
 }
