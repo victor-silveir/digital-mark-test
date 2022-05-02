@@ -20,11 +20,11 @@ function SideBar(): JSX.Element {
 				<S.MenuGroup>
 					<S.MenuItem>
 						<AiOutlineUser size={25} />
-						Dashboard
+						<S.ItemLink to="/">Clientes</S.ItemLink>
 					</S.MenuItem>
 					<S.MenuItem>
 						<BiCodeAlt size={25} />
-						Sobre mim
+						<S.ItemLink to="/about-me">Sobre mim</S.ItemLink>
 					</S.MenuItem>
 				</S.MenuGroup>
 			</S.MenuContainer>

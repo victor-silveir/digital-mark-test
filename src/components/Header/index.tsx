@@ -29,7 +29,6 @@ function Header({ pageTitle, ...props }: HeaderProps): JSX.Element {
 					display={a}
 				/>
 			</S.HeaderInformationsContainer>
-			<S.ProfileContainer>Profile</S.ProfileContainer>
 		</S.NavHeader>
 	);
 }
