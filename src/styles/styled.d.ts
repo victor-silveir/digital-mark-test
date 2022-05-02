@@ -9,9 +9,20 @@ declare module 'styled-components' {
 			white: string;
 		};
 		fonts: {
-			small: string;
-			medium: string;
-			large: string;
+			family: string;
+			normal: number;
+			medium: number;
+			semiBold: number;
+			bold: number;
+			extraBold: number;
+			black: number;
+			sizes: {
+				small: string;
+				medium: string;
+				large: string;
+				xlarge: string;
+				xxlarge: string;
+			};
 		};
 	}
 }
