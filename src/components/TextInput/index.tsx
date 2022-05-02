@@ -25,7 +25,7 @@ function TextInput({
 		const newValue = e.currentTarget.value;
 		setValue(newValue);
 
-		!!onTyping && onTyping();
+		!!onTyping && onTyping(newValue);
 	};
 
 	return (

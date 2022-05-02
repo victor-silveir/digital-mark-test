@@ -16,6 +16,7 @@ export type TextFieldProps = {
 	iconClick?: () => void;
 	// eslint-disable-next-line no-unused-vars
 	onClick?: (event: MouseEvent) => void;
-	onTyping?: () => void;
+	// eslint-disable-next-line no-unused-vars
+	onTyping?: (value: string) => void;
 	display: boolean;
 } & Omit<InputProps, 'onChange'>;

@@ -26,7 +26,9 @@ function Table<T extends TableItem>({
 		<tr role="row" key={item.id}>
 			{cols.map((col) => (
 				<td role="gridcell" key={col.fieldName}>
-					{item[col.fieldName]}
+					{col.fieldName.indexOf('.') !== -1
+						? col.fieldName.split('.').reduce((x, y) => item[x][y])
+						: item[col.fieldName]}
 				</td>
 			))}
 		</tr>

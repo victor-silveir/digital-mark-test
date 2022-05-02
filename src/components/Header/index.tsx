@@ -1,5 +1,6 @@
 import { HTMLAttributes, useState } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
+import { useFilterValue } from '../../hooks/use-filter-value';
 import TextInput from '../TextInput';
 
 import * as S from './styles';
@@ -9,6 +10,7 @@ type HeaderProps = {
 } & HTMLAttributes<HTMLHeadElement>;
 
 function Header({ pageTitle, ...props }: HeaderProps): JSX.Element {
+	const { setFilterValue } = useFilterValue();
 	const [a, setA] = useState(false);
 	return (
 		<S.NavHeader {...props}>
@@ -20,6 +22,9 @@ function Header({ pageTitle, ...props }: HeaderProps): JSX.Element {
 					placeholder="Search"
 					iconClick={() => {
 						setA((current) => !current);
+					}}
+					onTyping={(value) => {
+						setFilterValue(value);
 					}}
 					display={a}
 				/>

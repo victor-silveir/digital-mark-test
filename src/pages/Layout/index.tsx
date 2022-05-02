@@ -4,13 +4,14 @@ import * as S from './styles';
 
 type LayoutProps = {
 	children?: ReactNode;
+	title: string;
 };
 
-function Layout({ children }: LayoutProps): JSX.Element {
+function Layout({ title, children }: LayoutProps): JSX.Element {
 	return (
 		<S.Grid>
 			<S.LayoutSidebar />
-			<S.LayoutHeader pageTitle="Hello world" />
+			<S.LayoutHeader pageTitle={title} />
 			<S.Container>{children}</S.Container>
 		</S.Grid>
 	);

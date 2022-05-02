@@ -1,5 +1,6 @@
 import { ThemeProvider } from 'styled-components';
-import Layout from './pages/Layout';
+import { FilterValueProvider } from './hooks/use-filter-value';
+import Routes from './routes';
 import GlobalStyles from './styles/global';
 import theme from './styles/theme';
 
@@ -7,7 +8,9 @@ function App() {
 	return (
 		<ThemeProvider theme={theme}>
 			<GlobalStyles />
-			<Layout />
+			<FilterValueProvider>
+				<Routes />
+			</FilterValueProvider>
 		</ThemeProvider>
 	);
 }

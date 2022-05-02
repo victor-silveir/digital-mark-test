@@ -8,26 +8,14 @@ export type OverlayProps = {
 	show?: boolean;
 };
 
-export const Overlay = styled.div<OverlayProps>`
-	${({ theme, show }) => css`
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		opacity: 0.5;
-		align-items: center;
-		justify-content: center;
-		display: ${show ? 'flex' : 'none'};
-		background-color: ${theme.colors.white};
-	`}
-`;
-
 export const Table = styled.table`
 	${({ theme }) => css`
 		box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.25);
-		background: ${theme.colors.primary};
+		background: ${theme.colors.background};
 		color: black;
 		border-collapse: collapse;
 		overflow: hidden;
+		border-radius: ${theme.border.radius};
 		width: 100%;
 
 		tr:first-child th {
@@ -40,7 +28,7 @@ export const Table = styled.table`
 
 		td,
 		th {
-			border-bottom: 1px solid ${theme.colors.white};
+			border-bottom: 1px solid ${theme.colors.background};
 			padding: 0.5rem;
 			text-align: left;
 		}
@@ -54,7 +42,8 @@ type ThProps = {
 export const Th = styled.th<ThProps>`
 	${({ width, theme }) => css`
 		padding: 1.2rem 0.5rem;
-		background-color: ${theme.colors.secondary};
+		font-weight: ${theme.fonts.semiBold};
+		background-color: ${theme.colors.primary};
 		color: ${theme.colors.white};
 		${!!width &&
 		css`
