@@ -23,6 +23,9 @@ const theme: DefaultTheme = {
 			xxlarge: '2rem',
 		},
 	},
+	border: {
+		radius: '0.75rem',
+	},
 };
 
 export default theme;

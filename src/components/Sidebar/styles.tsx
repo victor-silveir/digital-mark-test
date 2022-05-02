@@ -4,8 +4,10 @@ export const Wrapper = styled.div`
 	${({ theme }) => css`
 		height: 100vh;
 		width: 20.5rem;
-		padding: 1rem 1rem;
+		padding: 2rem 1rem;
 		background: ${theme.colors.primary};
+		border-top-right-radius: ${theme.border.radius};
+		border-bottom-right-radius: ${theme.border.radius};
 	`}
 `;
 

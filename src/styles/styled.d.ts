@@ -24,5 +24,8 @@ declare module 'styled-components' {
 				xxlarge: string;
 			};
 		};
+		border: {
+			radius: string;
+		};
 	}
 }
